@@ -1,0 +1,315 @@
+{
+ "competition": "u-donrulezz-pigeon-pitch-one-line-af06c6cf",
+ "winner": "wing-ads",
+ "method": "manual tournament (proxy judge down; see TOURNAMENT.md)",
+ "candidates": [
+  {
+   "slug": "statue-ads",
+   "text": "We turn every statue in this city into a billboard and every pigeon into a shareholder — seed round open, breadcrumbs optional.",
+   "scores": {
+    "funny": 3.5,
+    "original": 4,
+    "voice": 3.5,
+    "tight": 4
+   },
+   "head_to_head_wins": 0
+  },
+  {
+   "slug": "poop-fertilizer",
+   "text": "I'm raising $2M to turn pigeon poop into fertilizer: we already own the supply chain, the workforce, and the entire city as our factory floor.",
+   "scores": {
+    "funny": 3.5,
+    "original": 3,
+    "voice": 4,
+    "tight": 3.5
+   },
+   "head_to_head_wins": 0
+  },
+  {
+   "slug": "crumb-uber",
+   "text": "Uber for breadcrumbs: an app telling 10,000 pigeons where tourists drop fries, in real time, for a 10% crumb commission.",
+   "scores": {
+    "funny": 4,
+    "original": 3.5,
+    "voice": 4.5,
+    "tight": 4.5
+   },
+   "head_to_head_wins": 0
+  },
+  {
+   "slug": "pigeon-post",
+   "text": "PigeonPost: same-day delivery, zero fuel, zero traffic — and our couriers have been doing this since before your grandfather was born.",
+   "scores": {
+    "funny": 3,
+    "original": 2.5,
+    "voice": 3.5,
+    "tight": 4
+   },
+   "head_to_head_wins": 0
+  },
+  {
+   "slug": "sidewalk",
+   "text": "I spent six years eating off this sidewalk. Now I'm selling the sidewalk.",
+   "scores": {
+    "funny": 4,
+    "original": 4.5,
+    "voice": 4.5,
+    "tight": 5
+   },
+   "head_to_head_wins": 0
+  },
+  {
+   "slug": "statue-cleaning",
+   "text": "Statue cleaning is a $2B market. Our cleaners are already on site 24/7 — and they work for seed.",
+   "scores": {
+    "funny": 4,
+    "original": 4,
+    "voice": 4,
+    "tight": 4.5
+   },
+   "head_to_head_wins": 0
+  },
+  {
+   "slug": "coo-ratings",
+   "text": "Coo is the app where pigeons rate humans: five stars gets you fed, one star gets you exactly what you see on the statues.",
+   "scores": {
+    "funny": 4,
+    "original": 4,
+    "voice": 4.5,
+    "tight": 4
+   },
+   "head_to_head_wins": 0
+  },
+  {
+   "slug": "air-rights",
+   "text": "I own the air rights above every hot-dog cart in Manhattan and I charge rent in crumbs. Seed round's open.",
+   "scores": {
+    "funny": 3.5,
+    "original": 4,
+    "voice": 4.5,
+    "tight": 4
+   },
+   "head_to_head_wins": 0
+  },
+  {
+   "slug": "ledge-airbnb",
+   "text": "We're the Airbnb of window ledges: 40,000 prime perches, zero vacancies, and our guests never leave a bad review — they just leave.",
+   "scores": {
+    "funny": 3.5,
+    "original": 3,
+    "voice": 4,
+    "tight": 4
+   },
+   "head_to_head_wins": 0
+  },
+  {
+   "slug": "ten-thousand-staff",
+   "text": "I run a delivery startup with 10,000 employees who work for breadcrumbs, never unionize, and fly straight over traffic.",
+   "scores": {
+    "funny": 3.5,
+    "original": 3,
+    "voice": 4,
+    "tight": 4
+   },
+   "head_to_head_wins": 0
+  },
+  {
+   "slug": "moat",
+   "text": "Our moat? Every pigeon in this city already works for us. We're just the first ones to put it on a cap table.",
+   "scores": {
+    "funny": 3.5,
+    "original": 3.5,
+    "voice": 3.5,
+    "tight": 4.5
+   },
+   "head_to_head_wins": 0
+  },
+  {
+   "slug": "windows",
+   "text": "Seed round: $500K for 10% of PigeonPost — zero emissions, same-day delivery, and a perfect safety record if you don't count windows.",
+   "scores": {
+    "funny": 4,
+    "original": 3,
+    "voice": 4.5,
+    "tight": 4
+   },
+   "head_to_head_wins": 0
+  },
+  {
+   "slug": "no-office",
+   "text": "I'm CEO of a company with 50,000 employees, no office, no salaries, and 100% retention — nobody has ever fired a pigeon.",
+   "scores": {
+    "funny": 3.5,
+    "original": 3,
+    "voice": 4,
+    "tight": 4
+   },
+   "head_to_head_wins": 0
+  },
+  {
+   "slug": "wing-ads",
+   "text": "We sell ad space on pigeons: your logo, 10,000 wings, every park in the city — impressions you can literally count in droppings.",
+   "scores": {
+    "funny": 4.5,
+    "original": 4,
+    "voice": 4.5,
+    "tight": 4
+   },
+   "head_to_head_wins": 4
+  },
+  {
+   "slug": "term-sheet",
+   "text": "Pigeons already run this city's logistics. I'm just the first one asking for a term sheet instead of a breadcrumb.",
+   "scores": {
+    "funny": 3.5,
+    "original": 3.5,
+    "voice": 4,
+    "tight": 4.5
+   },
+   "head_to_head_wins": 0
+  },
+  {
+   "slug": "drone-network",
+   "text": "We've built the world's first pigeon-powered drone network: same payload, half the regulation, and our drones reproduce themselves.",
+   "scores": {
+    "funny": 4.5,
+    "original": 4.5,
+    "voice": 4,
+    "tight": 4
+   },
+   "head_to_head_wins": 2
+  },
+  {
+   "slug": "seed-round",
+   "text": "I'm raising a seed round — literally, sunflower seeds — but the term sheet says $1M and my co-founders are 40,000 pigeons with excellent credit.",
+   "scores": {
+    "funny": 4,
+    "original": 3.5,
+    "voice": 4,
+    "tight": 3.5
+   },
+   "head_to_head_wins": 0
+  },
+  {
+   "slug": "bench-coworking",
+   "text": "We turn park benches into coworking spaces: five crumbs a day, free Wi-Fi from the café next door, and the view is unbeatable.",
+   "scores": {
+    "funny": 3,
+    "original": 3.5,
+    "voice": 4,
+    "tight": 4
+   },
+   "head_to_head_wins": 0
+  },
+  {
+   "slug": "coocommerce",
+   "text": "CooCommerce connects tourists with pigeons: they pay $10 for a photo, we take 90%, and the pigeons take the rest in crumbs.",
+   "scores": {
+    "funny": 3.5,
+    "original": 3.5,
+    "voice": 4,
+    "tight": 4
+   },
+   "head_to_head_wins": 0
+  },
+  {
+   "slug": "bet-on-pigeon",
+   "text": "Don't bet on a pigeon — bet on the only workforce in this city that shows up before sunrise, works weekends, and has never once asked for a raise.",
+   "scores": {
+    "funny": 3.5,
+    "original": 3,
+    "voice": 4,
+    "tight": 3.5
+   },
+   "head_to_head_wins": 0
+  },
+  {
+   "slug": "tam-crumbs",
+   "text": "Our TAM is every crumb dropped in this city: $0 today, because nobody's charging for it yet. That's the opportunity.",
+   "scores": {
+    "funny": 3.5,
+    "original": 3.5,
+    "voice": 4,
+    "tight": 4.5
+   },
+   "head_to_head_wins": 0
+  },
+  {
+   "slug": "uber-of-sky",
+   "text": "We're the Uber of the sky, if Uber's drivers could fly, worked for birdseed, and had a 5,000-year record of never missing a delivery.",
+   "scores": {
+    "funny": 3,
+    "original": 2.5,
+    "voice": 3.5,
+    "tight": 3.5
+   },
+   "head_to_head_wins": 0
+  },
+  {
+   "slug": "product-market-fit",
+   "text": "Our pigeons already have product-market fit: every tourist in this city is a customer, and none of them know it yet.",
+   "scores": {
+    "funny": 3.5,
+    "original": 3.5,
+    "voice": 4,
+    "tight": 4.5
+   },
+   "head_to_head_wins": 0
+  },
+  {
+   "slug": "silent-partner",
+   "text": "My co-founder is a statue: silent partner, great location, zero equity demands. I'm the one doing the flying.",
+   "scores": {
+    "funny": 4,
+    "original": 4,
+    "voice": 4.5,
+    "tight": 4.5
+   },
+   "head_to_head_wins": 1
+  },
+  {
+   "slug": "disrupt-statues",
+   "text": "We're disrupting statues: our pigeons decorate 10,000 of them a day, and now we're charging the city to clean up after our own growth.",
+   "scores": {
+    "funny": 4,
+    "original": 4,
+    "voice": 4.5,
+    "tight": 4
+   },
+   "head_to_head_wins": 0
+  },
+  {
+   "slug": "doordash",
+   "text": "Think DoorDash, but the dashers have wings, the restaurants are trash cans, and the tip is whatever falls off your sandwich.",
+   "scores": {
+    "funny": 4,
+    "original": 3.5,
+    "voice": 5,
+    "tight": 4
+   },
+   "head_to_head_wins": 0
+  },
+  {
+   "slug": "hawk-churn",
+   "text": "I run a logistics company with zero vehicles, zero fuel, and 10,000 couriers who navigate by the sun. Our only churn problem is hawks.",
+   "scores": {
+    "funny": 4.5,
+    "original": 4.5,
+    "voice": 4.5,
+    "tight": 4
+   },
+   "head_to_head_wins": 3
+  },
+  {
+   "slug": "coo-ipo",
+   "text": "We're the first startup whose IPO prospectus is written in coos — and honestly, our unit economics are still better than WeWork's.",
+   "scores": {
+    "funny": 3.5,
+    "original": 3.5,
+    "voice": 3.5,
+    "tight": 4
+   },
+   "head_to_head_wins": 0
+  }
+ ]
+}
