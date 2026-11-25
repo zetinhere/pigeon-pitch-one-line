@@ -1,7 +1,29 @@
 {
  "competition": "u-donrulezz-pigeon-pitch-one-line-af06c6cf",
- "winner": "wing-ads",
- "method": "manual tournament (proxy judge down; see TOURNAMENT.md)",
+ "winner": "hawk-churn",
+ "method": "manual tournament + proxy-judge verification (see TOURNAMENT.md)",
+ "proxy_games": [
+  {
+   "winner": "hawk-churn",
+   "loser": "wing-ads",
+   "game_score": 0.85
+  },
+  {
+   "winner": "hawk-churn",
+   "loser": "drone-network",
+   "game_score": 0.85
+  },
+  {
+   "winner": "hawk-churn",
+   "loser": "silent-partner",
+   "game_score": 0.5
+  },
+  {
+   "winner": "silent-partner",
+   "loser": "hawk-churn",
+   "game_score": 0.5
+  }
+ ],
  "candidates": [
   {
    "slug": "statue-ads",
@@ -12,7 +34,8 @@
     "voice": 3.5,
     "tight": 4
    },
-   "head_to_head_wins": 0
+   "head_to_head_wins": 0,
+   "proxy_points": 0
   },
   {
    "slug": "poop-fertilizer",
@@ -23,7 +46,8 @@
     "voice": 4,
     "tight": 3.5
    },
-   "head_to_head_wins": 0
+   "head_to_head_wins": 0,
+   "proxy_points": 0
   },
   {
    "slug": "crumb-uber",
@@ -34,7 +58,8 @@
     "voice": 4.5,
     "tight": 4.5
    },
-   "head_to_head_wins": 0
+   "head_to_head_wins": 0,
+   "proxy_points": 0
   },
   {
    "slug": "pigeon-post",
@@ -45,7 +70,8 @@
     "voice": 3.5,
     "tight": 4
    },
-   "head_to_head_wins": 0
+   "head_to_head_wins": 0,
+   "proxy_points": 0
   },
   {
    "slug": "sidewalk",
@@ -56,7 +82,8 @@
     "voice": 4.5,
     "tight": 5
    },
-   "head_to_head_wins": 0
+   "head_to_head_wins": 0,
+   "proxy_points": 0
   },
   {
    "slug": "statue-cleaning",
@@ -67,7 +94,8 @@
     "voice": 4,
     "tight": 4.5
    },
-   "head_to_head_wins": 0
+   "head_to_head_wins": 0,
+   "proxy_points": 0
   },
   {
    "slug": "coo-ratings",
@@ -78,7 +106,8 @@
     "voice": 4.5,
     "tight": 4
    },
-   "head_to_head_wins": 0
+   "head_to_head_wins": 0,
+   "proxy_points": 0
   },
   {
    "slug": "air-rights",
@@ -89,7 +118,8 @@
     "voice": 4.5,
     "tight": 4
    },
-   "head_to_head_wins": 0
+   "head_to_head_wins": 0,
+   "proxy_points": 0
   },
   {
    "slug": "ledge-airbnb",
@@ -100,7 +130,8 @@
     "voice": 4,
     "tight": 4
    },
-   "head_to_head_wins": 0
+   "head_to_head_wins": 0,
+   "proxy_points": 0
   },
   {
    "slug": "ten-thousand-staff",
@@ -111,7 +142,8 @@
     "voice": 4,
     "tight": 4
    },
-   "head_to_head_wins": 0
+   "head_to_head_wins": 0,
+   "proxy_points": 0
   },
   {
    "slug": "moat",
@@ -122,7 +154,8 @@
     "voice": 3.5,
     "tight": 4.5
    },
-   "head_to_head_wins": 0
+   "head_to_head_wins": 0,
+   "proxy_points": 0
   },
   {
    "slug": "windows",
@@ -133,7 +166,8 @@
     "voice": 4.5,
     "tight": 4
    },
-   "head_to_head_wins": 0
+   "head_to_head_wins": 0,
+   "proxy_points": 0
   },
   {
    "slug": "no-office",
@@ -144,7 +178,8 @@
     "voice": 4,
     "tight": 4
    },
-   "head_to_head_wins": 0
+   "head_to_head_wins": 0,
+   "proxy_points": 0
   },
   {
    "slug": "wing-ads",
@@ -155,7 +190,8 @@
     "voice": 4.5,
     "tight": 4
    },
-   "head_to_head_wins": 4
+   "head_to_head_wins": 4,
+   "proxy_points": 0
   },
   {
    "slug": "term-sheet",
@@ -166,7 +202,8 @@
     "voice": 4,
     "tight": 4.5
    },
-   "head_to_head_wins": 0
+   "head_to_head_wins": 0,
+   "proxy_points": 0
   },
   {
    "slug": "drone-network",
@@ -177,7 +214,8 @@
     "voice": 4,
     "tight": 4
    },
-   "head_to_head_wins": 2
+   "head_to_head_wins": 2,
+   "proxy_points": 0
   },
   {
    "slug": "seed-round",
@@ -188,7 +226,8 @@
     "voice": 4,
     "tight": 3.5
    },
-   "head_to_head_wins": 0
+   "head_to_head_wins": 0,
+   "proxy_points": 0
   },
   {
    "slug": "bench-coworking",
@@ -199,7 +238,8 @@
     "voice": 4,
     "tight": 4
    },
-   "head_to_head_wins": 0
+   "head_to_head_wins": 0,
+   "proxy_points": 0
   },
   {
    "slug": "coocommerce",
@@ -210,7 +250,8 @@
     "voice": 4,
     "tight": 4
    },
-   "head_to_head_wins": 0
+   "head_to_head_wins": 0,
+   "proxy_points": 0
   },
   {
    "slug": "bet-on-pigeon",
@@ -221,7 +262,8 @@
     "voice": 4,
     "tight": 3.5
    },
-   "head_to_head_wins": 0
+   "head_to_head_wins": 0,
+   "proxy_points": 0
   },
   {
    "slug": "tam-crumbs",
@@ -232,7 +274,8 @@
     "voice": 4,
     "tight": 4.5
    },
-   "head_to_head_wins": 0
+   "head_to_head_wins": 0,
+   "proxy_points": 0
   },
   {
    "slug": "uber-of-sky",
@@ -243,7 +286,8 @@
     "voice": 3.5,
     "tight": 3.5
    },
-   "head_to_head_wins": 0
+   "head_to_head_wins": 0,
+   "proxy_points": 0
   },
   {
    "slug": "product-market-fit",
@@ -254,7 +298,8 @@
     "voice": 4,
     "tight": 4.5
    },
-   "head_to_head_wins": 0
+   "head_to_head_wins": 0,
+   "proxy_points": 0
   },
   {
    "slug": "silent-partner",
@@ -265,7 +310,8 @@
     "voice": 4.5,
     "tight": 4.5
    },
-   "head_to_head_wins": 1
+   "head_to_head_wins": 1,
+   "proxy_points": 0.5
   },
   {
    "slug": "disrupt-statues",
@@ -276,7 +322,8 @@
     "voice": 4.5,
     "tight": 4
    },
-   "head_to_head_wins": 0
+   "head_to_head_wins": 0,
+   "proxy_points": 0
   },
   {
    "slug": "doordash",
@@ -287,7 +334,8 @@
     "voice": 5,
     "tight": 4
    },
-   "head_to_head_wins": 0
+   "head_to_head_wins": 0,
+   "proxy_points": 0
   },
   {
    "slug": "hawk-churn",
@@ -298,7 +346,8 @@
     "voice": 4.5,
     "tight": 4
    },
-   "head_to_head_wins": 3
+   "head_to_head_wins": 3,
+   "proxy_points": 2.2
   },
   {
    "slug": "coo-ipo",
@@ -309,7 +358,8 @@
     "voice": 3.5,
     "tight": 4
    },
-   "head_to_head_wins": 0
+   "head_to_head_wins": 0,
+   "proxy_points": 0
   }
  ]
 }

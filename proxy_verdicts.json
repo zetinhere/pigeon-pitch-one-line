@@ -1,0 +1,52 @@
+{
+ "judge": "100milionseek/deepseek-v4.1-flash-free (direct route, verdict-first prompt, max_tokens 300)",
+ "scoring": "per call 0.5 + margin/10 for the picked entry; game = mean of the two calls (both orders)",
+ "wing_ads_vs_hawk_churn": {
+  "call1": {
+   "verdict": "B",
+   "margin": 3,
+   "reason": "Verdict: B\nMargin: 3\nB lands a sharper joke: “zero vehicles, zero fuel” sets up a real startup pitch, then “our only churn problem is hawks” delivers a genuinely pigeon-specific punchline. A is clever, but its droppings “imp",
+   "rc": 0
+  },
+  "call2": {
+   "verdict": "A",
+   "margin": 4,
+   "reason": "Verdict: A\nMargin: 4\nA is a sharper joke: the “zero vehicles, zero fuel” logistics pitch pays off with hawks as churn, which is specific, deadpan, and unmistakably pigeon. B leans on a countable-impressions/droppings pun, funny but milder and less surprising.",
+   "rc": 0
+  }
+ },
+ "hawk_churn_vs_drone_network_and_silent_partner": {
+  "hawk_vs_drone": {
+   "x": "hawk-churn",
+   "y": "drone-network",
+   "call1": {
+    "verdict": "A",
+    "margin": 3,
+    "reason": "Verdict: A\nMargin: 3\nA lands a real joke: “zero vehicles, zero fuel” sets up the startup pitch, then “churn problem is hawks” pays it off with pigeon-specific stakes. B is clever but feels more like a generic drone pitch with pigeon branding, and the stray “300” weakens the tightness.",
+    "rc": 0
+   },
+   "call2": {
+    "verdict": "B",
+    "margin": 4,
+    "reason": "Verdict: B\nMargin: 4\nB lands as a real joke: the deadpan startup metrics (“zero vehicles,” “10,000 couriers”) collapse into pigeon life, and “our only churn problem is hawks” is a sharp, surprising punchline. A is clever but feels more like a mild sci-fi pun than a pitch that earns its laugh.",
+    "rc": 0
+   }
+  },
+  "hawk_vs_silent": {
+   "x": "hawk-churn",
+   "y": "silent-partner",
+   "call1": {
+    "verdict": "A",
+    "margin": 3,
+    "reason": "Verdict: A\nMargin: 3\nA is an actual startup pitch with a clean, pigeon-specific punchline: hawk predation as churn. B is funny but feels more like a co-founder joke than a business, and its punchline is softer.",
+    "rc": 0
+   },
+   "call2": {
+    "verdict": "A",
+    "margin": 3,
+    "reason": "Verdict: A\nMargin: 3\n\nA lands a real joke with a pigeon's-eye logic: the statue is the perfect co-founder — silent, immovable, no equity — and the punchline (\"I'm the one doing the flying\") is earned. B has a fun hawk churn gag but \"couriers who navigate by the sun\" muddles the species and the stray",
+    "rc": 0
+   }
+  }
+ }
+}

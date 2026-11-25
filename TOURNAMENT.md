@@ -52,7 +52,7 @@ silent-partner (17), statue-cleaning (16.5).
 5. statue-cleaning 0-4
 6. sidewalk 0-5 (criterion-1 casualty)
 
-## WINNER
+## WINNER (manual)
 wing-ads (128 chars):
 "We sell ad space on pigeons: your logo, 10,000 wings, every park in the city — impressions you can literally count in droppings."
 
@@ -61,3 +61,28 @@ is the hardest-landing joke in the field (criterion 2); selling ad space on pige
 surprising business no other candidate tries (criterion 3); 10,000 wings + every park =
 unmistakably pigeon city life (criterion 4); 128 chars, no wasted word (criterion 5).
 Runner-up: hawk-churn ("...Our only churn problem is hawks.") — keep as v2 candidate.
+
+## Proxy-judge verification (26 Nov 2026, ~05:05-05:35 WIB) — OVERTURNS the manual result
+- The direct 100milionseek route revived (hms.py helper). Judge: deepseek-v4.1-flash-free,
+  verdict-first prompt ("FIRST line Verdict: A/B, SECOND line Margin: 1-5, then a short
+  reason, under 120 words"), max_tokens 300, ~5 min per call, sequential, 580s timeout.
+  Raw verdicts in proxy_verdicts.json (repo) / /tmp/pigeon/verify_final.json + verify_hawk.json.
+- wing-ads vs hawk-churn: proxy picked HAWK both orders, margins 3 and 4 → game 0.85-0.15.
+  Reasons: "churn problem is hawks" is a sharper, deadpan, pigeon-specific punchline;
+  the droppings pun is "funny but milder and less surprising".
+- hawk-churn vs drone-network: HAWK both orders, margins 3 and 4 → game 0.85-0.15.
+- hawk-churn vs silent-partner: SPLIT — hawk margin 3, silent margin 3 → game 0.50-0.50.
+- Proxy tally (6 calls): hawk-churn won 5, silent-partner 1. hawk-churn is the proxy
+  winner and the program's pick; main.py ranks by proxy game score first.
+- Note: an earlier parallel verify_top4 run (4 workers) produced only SIGTERM'd empty
+  calls (rc -15) — parallel hms.py calls that night were killed; sequential calls worked.
+
+## FINAL WINNER
+hawk-churn (134 chars):
+"I run a logistics company with zero vehicles, zero fuel, and 10,000 couriers who navigate by the sun. Our only churn problem is hawks."
+
+Why it wins (proxy + manual): unambiguous logistics-company pitch (criterion 1);
+the "churn problem is hawks" punchline is the hardest-landing joke in the field and
+the most pigeon-specific one — only a pigeon fears hawks as a business risk
+(criteria 2 + 4); the deadpan startup-metrics setup collapsing into predation is
+surprising (criterion 3); 134 chars, no wasted word (criterion 5).

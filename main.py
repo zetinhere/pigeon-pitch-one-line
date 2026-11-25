@@ -6,29 +6,44 @@ city pigeon gives investors for its startup.
 
 How the line was chosen
 ------------------------
-28 candidate pitches were drafted, then ranked in a manual tournament against
-the judge's published brief, criteria in order: (1) a one-line elevator pitch
-from a city pigeon to investors for its startup; (2) funnier, a real joke that
-lands; (3) original and surprising; (4) the pigeon's voice and city life;
-(5) tight, every word earning its place. The top 6 played a round-robin;
-`wing-ads` went 4-0 (see TOURNAMENT.md for the full record). The proxy judge
-(100milionseek/deepseek-v4.1-flash-free, via the 9router gateway and direct)
-was down the night of the build — gateway 503s/hangs, direct route ~5 min a
-call — so the tournament was judged by hand against the brief, as the task
-allows when the judge is down entirely.
+28 candidate pitches were drafted and cut to a top 6 in a manual tournament
+against the judge's published brief, criteria in order: (1) a one-line
+elevator pitch from a city pigeon to investors for its startup; (2) funnier,
+a real joke that lands; (3) original and surprising; (4) the pigeon's voice
+and city life; (5) tight, every word earning its place. The manual table
+first crowned `wing-ads` (4-0 in the top-6 round-robin).
+
+Then the proxy judge came back. The judge (100milionseek/deepseek-v4.1-flash-
+free, direct route — the 9router gateway was 503ing and hanging that night)
+played the top 4 head-to-head, two calls per game, both orders, verdict
+first, margins 1-5, scored the house way (0.5 + margin/10 per call, game =
+mean of the two calls):
+
+    hawk-churn vs wing-ads:        0.85 - 0.15  (margins 3, 4)
+    hawk-churn vs drone-network:   0.85 - 0.15  (margins 3, 4)
+    hawk-churn vs silent-partner:  0.50 - 0.50  (margins 3, 3, split)
+
+Five of six proxy calls went to `hawk-churn`. The judge's reasons were
+consistent: "zero vehicles, zero fuel" sets up a real startup pitch, then
+"our only churn problem is hawks" pays it off with a deadpan, pigeon-specific
+punchline; the droppings pun it beat is "funny but milder and less
+surprising". The manual head-to-head was overturned on the proxy's evidence,
+so the program below ranks by proxy game score first, and only then by the
+manual table. Full record in TOURNAMENT.md; raw proxy verdicts in
+proxy_verdicts.json.
 
 The program itself is deterministic: it re-derives the winner from the
-recorded tournament table below (criterion totals, then head-to-head wins)
-and writes exactly that line. No network, no randomness, no model calls.
+recorded tables below and writes exactly that line. No network, no
+randomness, no model calls.
 """
 
 import json
 import os
 import sys
 
-# slug, pitch, (funny, original, voice, tight) each out of 5, head-to-head wins
-# in the top-6 round-robin. Only the top 6 played head-to-heads; the rest are
-# listed with their criterion totals from the first cut.
+# slug, pitch, (funny, original, voice, tight) each out of 5, manual
+# head-to-head wins in the top-6 round-robin. Only the top 6 played
+# head-to-heads; the rest are listed with their criterion totals.
 CANDIDATES = [
     ("statue-ads", "We turn every statue in this city into a billboard and every pigeon into a shareholder — seed round open, breadcrumbs optional.", (3.5, 4, 3.5, 4), 0),
     ("poop-fertilizer", "I'm raising $2M to turn pigeon poop into fertilizer: we already own the supply chain, the workforce, and the entire city as our factory floor.", (3.5, 3, 4, 3.5), 0),
@@ -60,33 +75,61 @@ CANDIDATES = [
     ("coo-ipo", "We're the first startup whose IPO prospectus is written in coos — and honestly, our unit economics are still better than WeWork's.", (3.5, 3.5, 3.5, 4), 0),
 ]
 
+# Proxy-judge games (deepseek-v4.1-flash-free, direct route, 26 Nov 2026):
+# (winner_slug, loser_slug, game_score_for_winner). Only the top 4 were
+# played; a slug absent here has no proxy games. Game score is the mean of
+# the two calls, each 0.5 + margin/10 for the picked entry.
+PROXY_GAMES = [
+    ("hawk-churn", "wing-ads", 0.85),
+    ("hawk-churn", "drone-network", 0.85),
+    ("hawk-churn", "silent-partner", 0.50),
+    ("silent-partner", "hawk-churn", 0.50),
+]
+
 MAX_CHARS = 200
 
 
+def proxy_points(slug):
+    """Total game score a candidate banked in proxy games (0 if unplayed)."""
+    return round(sum(s for w, _l, s in PROXY_GAMES if w == slug), 2)
+
+
+def rank_key(entry):
+    """Proxy evidence first, then the manual table, then criterion total."""
+    slug, _text, scores, manual_wins = entry
+    return (proxy_points(slug), manual_wins, sum(scores))
+
+
 def pick_winner(candidates):
-    """Winner = most head-to-head wins, then highest criterion total."""
-    def key(entry):
-        _slug, _text, scores, wins = entry
-        return (wins, sum(scores))
-    return max(candidates, key=key)
+    ranked = sorted(candidates, key=rank_key, reverse=True)
+    return ranked[0], ranked
+
+
+def check_gate(text):
+    """The sealed gate: UTF-8 text of 1-200 chars, not only whitespace."""
+    if not (1 <= len(text) <= MAX_CHARS):
+        raise SystemExit(f"entry is {len(text)} chars, outside 1-{MAX_CHARS}")
+    if not text.strip():
+        raise SystemExit("entry is blank")
+    if "\n" in text or "\r" in text:
+        raise SystemExit("entry must be a single line")
+    text.encode("utf-8")  # raises if not valid UTF-8
 
 
 def main():
-    slug, text, _scores, _wins = pick_winner(CANDIDATES)
-    # Gate: UTF-8, 1-200 characters, not only whitespace, one line.
-    if not (1 <= len(text) <= MAX_CHARS):
-        raise SystemExit(f"entry is {len(text)} chars, outside 1-{MAX_CHARS}")
-    if not text.strip() or "\n" in text:
-        raise SystemExit("entry must be a single non-blank line")
-    text.encode("utf-8")  # raises if not valid UTF-8
+    winner, ranked = pick_winner(CANDIDATES)
+    slug, text, _scores, _wins = winner
+    check_gate(text)
     out_dir = os.environ.get("OUTPUT_DIR", "/output")
     os.makedirs(out_dir, exist_ok=True)
     path = os.path.join(out_dir, "entry.txt")
-    with open(path, "w", encoding="utf-8") as f:
-        f.write(text)
-    print(f"[{slug}] ({len(text)} chars)")
+    with open(path, "w", encoding="utf-8") as handle:
+        handle.write(text)
+    print(f"winner: [{slug}] ({len(text)} chars, proxy {proxy_points(slug)})")
     print(text)
     print(f"wrote {path}")
+    print("ranking: " + ", ".join(
+        f"{s} (proxy {proxy_points(s)}, manual {w})" for s, _t, _c, w in ranked[:4]))
 
 
 if __name__ == "__main__":
